@@ -52,6 +52,7 @@ def get_fruit_load_list():
     return my_cur.fetchall()
     
 def insert_row_snowflake(new_fruit):
+  print("Inside insert function")
   with my_cnx.cursor() as my_cur:
     my_cur.execute(" INSERT into fruit_load_list values ('"+ new_fruit +"');") 
     return 'Thank your for adding', new_fruit
